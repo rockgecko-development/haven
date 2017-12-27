@@ -190,6 +190,15 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        CheckBox eventToasterCheck = (CheckBox) findViewById(R.id.event_toaster_enabled);
+        eventToasterCheck.setChecked(preferences.isEventToasterEnabled());
+        eventToasterCheck.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                preferences.setEventToasterEnabled(isChecked);
+            }
+        });
+
 		askForPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, 1);
 
 	}

@@ -265,7 +265,9 @@ public class MonitorService extends Service {
         StringBuffer alertMessage = new StringBuffer();
         alertMessage.append(getString(R.string.intrusion_detected,eventTrigger.getStringType(this)));
 
-        Toast.makeText(this,alertMessage.toString(),Toast.LENGTH_SHORT).show();
+        if(mPrefs.isEventToasterEnabled()) {
+            Toast.makeText(this, alertMessage.toString(), Toast.LENGTH_SHORT).show();
+        }
 
         if (mPrefs.getSignalUsername() != null)
         {

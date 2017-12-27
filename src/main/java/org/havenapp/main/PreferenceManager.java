@@ -24,6 +24,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
+import org.havenapp.main.model.EventTrigger;
+
 
 public class PreferenceManager {
 	
@@ -66,6 +68,8 @@ public class PreferenceManager {
     private static final String SIGNAL_USERNAME = "signal_username";
 
     private static final String FIRST_LAUNCH = "first_launch";
+
+    private static final String EVENT_TOASTER_ENABLED = "event_toaster_enabled";
 
 
     private Context context;
@@ -302,5 +306,16 @@ public class PreferenceManager {
     public int getAudioLength ()
     {
         return 15000; //30 seconds
+    }
+
+    public boolean isEventToasterEnabled ()
+    {
+        return appSharedPrefs.getBoolean(EVENT_TOASTER_ENABLED,true);
+    }
+
+    public void setEventToasterEnabled (boolean enabled)
+    {
+        prefsEditor.putBoolean(EVENT_TOASTER_ENABLED,enabled);
+        prefsEditor.commit();
     }
 }

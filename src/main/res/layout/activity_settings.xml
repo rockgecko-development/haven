@@ -135,6 +135,12 @@
 			/>
 	</LinearLayout>
 	<CheckBox
+		android:id="@+id/event_toaster_enabled"
+		android:text="@string/event_toaster_enabled_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:context="org.havenapp.main.SettingsActivity" />
+	<CheckBox
 		android:id="@+id/sms_check"
 		android:text="@string/sms_label"
 		android:layout_width="wrap_content"
@@ -223,6 +229,7 @@
 		android:layout_height="wrap_content"
 		android:inputType="textPassword"
 		tools:context="org.havenapp.main.SettingsActivity" />
+
 
 </LinearLayout>
 

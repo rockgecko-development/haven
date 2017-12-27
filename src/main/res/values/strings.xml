@@ -95,6 +95,8 @@
 
     <string name="onboarding_action_end">Finish</string>
 
+    <string name="event_toaster_enabled_label">Show message on event trigger</string>
+
     <string name="remote_access_label">Enable remote access via Tor Onion Service</string>
     <string name="remote_access_hint">Onion service address from Orbot</string>
     <string name="remote_access_credential_hint">Set remote password</string>
